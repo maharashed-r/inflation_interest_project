@@ -1,0 +1,44 @@
+---
+title: "Inflation and Interest Rate Dynamics"
+author: "Maha"
+date: "2026"
+output: word_document
+---
+
+# 1. Introduction
+
+Inflation and interest rates are closely linked in macroeconomic theory and monetary policy. Central banks often adjust interest rates to stabilize prices and control inflationary pressures. Understanding the relationship between these variables is important for evaluating monetary policy effectiveness.
+
+This paper investigates the relationship between inflation and interest rates using an econometric time-series approach. Specifically, we apply the Autoregressive Distributed Lag (ARDL) model and the Error Correction Model (ECM) to analyze both short-run and long-run dynamics.
+
+# 2. Literature Review
+
+Previous studies have examined the interaction between interest rates and inflation using different econometric frameworks. Traditional monetary theory suggests that higher interest rates may reduce inflation in the long run through contractionary monetary policy.
+
+Empirical studies such as Fisher (1930) proposed the Fisher Effect, which suggests that nominal interest rates adjust to expected inflation over time. More recent research employs cointegration techniques, ARDL models, and vector autoregressive models to capture dynamic interactions between macroeconomic variables.
+
+# 3. Data
+
+The dataset used in this study consists of quarterly observations of:
+
+- Inflation
+- Interest Rate
+- GDP Growth
+
+The data were transformed into quarterly frequency and adjusted for stationarity. Inflation and GDP growth were calculated using logarithmic differences.
+
+# 4. Methodology
+
+To examine the relationship between inflation and interest rates, this study uses the ARDL modeling framework. The ARDL model allows estimation of both short-run and long-run relationships between variables even when the variables are integrated of order I(0) and I(1).
+
+After estimating the ARDL model, we derive the Error Correction Model (ECM) to analyze short-run dynamics and the speed of adjustment toward long-run equilibrium.
+
+# 5. Empirical Results
+
+The ARDL estimation results indicate the existence of a long-run relationship between inflation and interest rates. The error correction term in the ECM model is negative and statistically significant, suggesting convergence toward long-run equilibrium after short-term shocks.
+
+Diagnostic tests confirm that the model satisfies standard econometric assumptions such as the absence of serial correlation and heteroskedasticity.
+
+# 6. Conclusion
+
+This study examined the dynamic relationship between inflation and interest rates using ARDL and ECM models. The results suggest that monetary policy variables play an important role in explaining inflation dynamics. Future research may extend this framework by incorporating additional macroeconomic variables such as money supply, exchange rates, or expectations.

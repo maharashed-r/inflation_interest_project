@@ -1,0 +1,10 @@
+"Variable","Coefficient"
+"(Intercept)",0.0448
+"d(L(inflation, 1))",-0.1855
+"d(L(inflation, 2))",-0.1495
+"d(L(inflation, 3))",-0.1348
+"d(interest)",0.0352
+"d(L(interest, 1))",0.0359
+"d(L(interest, 2))",0.0399
+"d(L(interest, 3))",-0.0013
+"ect",-0.3873
