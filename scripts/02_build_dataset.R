@@ -36,4 +36,6 @@ write.csv(quarter_data,
           here("results","final_dataset.csv"),
           row.names = FALSE)
 
-View(quarter_data)
+# Archival closure (2026-10): View() opens a GUI viewer and halts non-interactive runs.
+# It has no effect on any computed value; it is kept for interactive use only.
+if (interactive()) View(quarter_data)

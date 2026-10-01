@@ -37,4 +37,12 @@ source(here("scripts","06_diagnostics.R"))
 cat("Step 7: Plots...\n")
 source(here("scripts","07_plots.R"))
 
+# الجداول (Archival closure 2026-10: added so the committed tables have an explicit run order)
+# Step 8 re-creates tables/* from a MONTHLY BIVARIATE specification, different from the
+# QUARTERLY model of steps 3-7. It must run after step 7 because it replaces `best_model`.
+# It overwrites tables/*. To check the committed outputs without overwriting them, use
+# tools/reproduce_and_verify.R instead.
+cat("Step 8: Tables (monthly specification)...\n")
+source(here("scripts","08_tables.R"))
+
 cat("Project finished successfully.\n")
