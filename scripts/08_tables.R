@@ -1,5 +1,18 @@
 source("scripts/00_packages.R")
 
+# Archival closure (2026-10) - reproducibility only, no change to any computation:
+# - this script was written to run in the same R session after scripts/02_build_dataset.R,
+#   because it uses the monthly object `raw_data` created there;
+# - modelsummary is used by datasummary_skim() below before the original
+#   library(modelsummary) call, so it is attached here first;
+# - the three section titles (Table 1-3) were bare text and are now comments.
+# NOTE: the tables written here come from a MONTHLY, BIVARIATE specification
+# (inflation ~ interest), not from the quarterly model in scripts/04-06.
+# See docs/SCIENTIFIC_LIMITATIONS.md.
+library(here)
+if (!exists("raw_data")) source(here("scripts", "02_build_dataset.R"))
+library(modelsummary)
+
 table_desc <- data.frame(
   Variable = c("Inflation", "Interest Rate"),
   Mean = c(mean(raw_data$inflation_monthly, na.rm = TRUE),
@@ -14,13 +27,13 @@ write.csv(
   row.names = FALSE
 )
 
-Table 1 – Descriptive Statistics
+# Table 1 – Descriptive Statistics
 datasummary_skim(
   raw_data[,c("inflation_monthly","FEDFUNDS")],
   output = "tables/descriptive_statistics.html"
 )
 
-Table 2 – Correlation Matrix
+# Table 2 – Correlation Matrix
 library(modelsummary)
 
 datasummary_correlation(
@@ -28,7 +41,7 @@ datasummary_correlation(
   output = "tables/correlation_matrix.html"
 )
 
-Table 3 – Unit Root Test (ADF)
+# Table 3 – Unit Root Test (ADF)
 library(urca)
 
 # حذف القيم المفقودة

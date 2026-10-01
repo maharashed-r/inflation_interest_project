@@ -1,6 +1,7 @@
 source("scripts/00_packages.R")
 
-plot(
+# Archival closure (2026-10): on-screen copy only in interactive sessions.
+if (interactive()) plot(
   cusum_test,
   main = "CUSUM Stability Test",
   xlab = "Time",
