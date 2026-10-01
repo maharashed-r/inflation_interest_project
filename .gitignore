@@ -1,4 +1,31 @@
+# R / RStudio session state
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+*.Rcheck/
+
+# Plots written by headless R sessions
+Rplots.pdf
+
+# Credentials and local environment (never commit)
+.env
+.env.*
+.Renviron
+*.pem
+*.key
+
+# Editors and operating systems
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Office lock files
+~$*
+
+# Note: data/, results/, tables/, figures/ and paper/ are part of the preserved
+# historical record and are intentionally NOT ignored.
